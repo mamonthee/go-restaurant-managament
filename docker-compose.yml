@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "9000:9000"
+    environment:
+      - PORT=9000
+      - MONGODB_URI=mongodb+srv://monmona423:Dc0n41VCDzkGoUWE@cluster0.2zryqzq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - SECRET_KEY=1234
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
