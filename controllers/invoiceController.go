@@ -119,6 +119,7 @@ func GetInvoiceByDate() gin.HandlerFunc {
 
 		project := bson.D{{"$project", bson.D{
 			{"invoice_id", "$invoice_data._id"},
+			{"invoice_number", "$invoice_data.invoice_number"},
 			{"order_id", "$invoice_data.order_id"},
 			{"payment_method", "$invoice_data.payment_method"},
 			{"payment_status", "$invoice_data.payment_status"},

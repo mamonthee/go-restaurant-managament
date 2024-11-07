@@ -63,7 +63,7 @@ func main() {
 	// Serve Vue.js static files
 	router.Static("/frontend", filepath.Join(".", "frontend", "dist"))
 	// router.Static("/frontend", "/home/user/go-development/restaurant/restaurant-management-frontend/dist")
-	router.Static("/config", "./config")
+	// router.Static("/config", "./config")
 	// Fallback route to serve index.html for Vue.js frontend routes
 	router.NoRoute(func(c *gin.Context) {
 		path := c.Request.URL.Path
